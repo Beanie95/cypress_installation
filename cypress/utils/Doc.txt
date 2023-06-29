@@ -1,0 +1,30 @@
+Install + Run
+
+Wednesday, June 21, 2023
+5:48 PM
+
+Lỗi: yarn : File C:\Users\bobbyhadz\AppData\Roaming\npm\yarn.ps1 cannot be loaded because running scripts is disabled on this system. For more information, see about_Execution_Policies at https:/go.microsoft.com/fwlink/?LinkID=135170.
+
+Fix:
+	1. Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+	2. Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+	3. Get-ExecutionPolicy (trả về RemoteSigned là có thể dùng đc yarn)
+
+	1. Down NodeJS (node -v: check version, npm -v)
+	2. Down VSCode
+	3. Mkdir install_folder
+	Pwd
+	Cd source code
+	Npm init -y (khoi tao simple project)
+	4. Open vsCode
+	Npm i yarn -g (cai dat yarn)
+	Yarn add -D cypress (cai cypress su dung yarn)
+	Npm install cypress --save-dev (cai cypress su dung npm)
+	Npx cypress open (mo cypress)
+	Or 
+	Thay "cypress open" vao test roi chay npm run test or yarn test
+	
+	
+Run single file: npx cypress run --spec cypress/api_test/TC_06_handle_requestChain.js or yarn cypress run --spec cypress/api_test/TC_06_handle_requestChain.js
+Run all: npx cypress run or yarn cypress run
+Chay bien moi truong o CM: yarn cypress run --spec cypress/api_test/TC_06_handle_requestChain.js --env baseUrl=https://jsonplaceholder.typicode.com/posts
