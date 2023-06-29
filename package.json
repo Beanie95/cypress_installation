@@ -4,14 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cypress open"
-
+    "test": "cypress open",
+    "jsdoc": "jsdoc -d docs-output/ -u tutorials/ src/"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "cypress": "^12.16.0",
-    "jest-cli": "^29.5.0"
+    "jest-cli": "^29.5.0",
+    "jsdoc": "^4.0.2",
+    "typescript": "^5.1.6"
   }
 }

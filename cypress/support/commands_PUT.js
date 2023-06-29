@@ -23,11 +23,7 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
-/**
- * @memberof cy
- * @method update
- * @param {Object,string} putBody, putNum
- */
+
 import {METHOD} from '../utils/Methods'
 let header = {'Content-type': 'application/json; charset=UTF-8'}
 
