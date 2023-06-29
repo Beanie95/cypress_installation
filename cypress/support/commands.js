@@ -36,3 +36,26 @@ Cypress.Commands.add("create", postBody => {
         body: postBody
     })
 })
+
+Cypress.Commands.add("read", postNum => {
+    cy.request({
+        method: METHOD.get,
+        url: Cypress.env("baseUrl") + "/" + postNum
+    })
+})
+
+Cypress.Commands.add("update", (putBody, putNum) => {
+    cy.request({
+        method: METHOD.put,
+        url: Cypress.env("baseUrl") + "/" + putNum,
+        header: header,
+        body: putBody
+    })
+})
+
+Cypress.Commands.add("delete", delNum => {
+    cy.request({
+        method: METHOD.delete,
+        url: Cypress.env("baseUrl") + "/" + delNum
+    })
+})

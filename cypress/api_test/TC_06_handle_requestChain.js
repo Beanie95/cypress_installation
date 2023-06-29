@@ -19,7 +19,7 @@ describe('handle chain request', () => {
             userId: 1,
         }
 
-        cy.create(requestPostBody) .then(res => {
+        cy.create(requestPostBody).then(res => {
             cy.read((Number(res.body.id)-1).toString()).then(res => {
                 cy.update(requestPutBody, res.body.id).then(res => {
                     cy.delete(res.body.id).then(res => {

@@ -28,3 +28,6 @@ Fix:
 Run single file: npx cypress run --spec cypress/api_test/TC_06_handle_requestChain.js or yarn cypress run --spec cypress/api_test/TC_06_handle_requestChain.js
 Run all: npx cypress run or yarn cypress run
 Chay bien moi truong o CM: yarn cypress run --spec cypress/api_test/TC_06_handle_requestChain.js --env baseUrl=https://jsonplaceholder.typicode.com/posts
+
+https://dev.to/xvier/documenting-cypress-custom-commands-2n13
+

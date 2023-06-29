@@ -14,10 +14,7 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import './commands_POST'
-import './commands_GET'
-import './commands_PUT'
-import './commands_DELETE'
+import './commands'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
