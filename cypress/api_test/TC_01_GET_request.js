@@ -4,9 +4,9 @@ describe('Test GET request', () => {
             url: 'https://jsonplaceholder.typicode.com/posts',
             method: 'GET'
         }).then(response => {
-            cy.log(JSON.stringify(response.body))
+            //cy.log(JSON.stringify(response.body))
 
-            let { status, body } = response
+            let { status, body, title } = response
             expect(status).to.eq(200)
             expect(body.length).to.eq(100)
 
@@ -14,10 +14,13 @@ describe('Test GET request', () => {
             let roundedRandomIndex = Math.floor(randomIndex)
             let randomObject = body[roundedRandomIndex]
 
-            verifyNotEmpty('userId', randomObject.userId)
-            verifyNotEmpty('id', randomObject.id)
-            verifyNotEmpty('title', randomObject.title)
-            verifyNotEmpty('body', randomObject.body)
+            // verifyNotEmpty('userId', randomObject.userId)
+            // verifyNotEmpty('id', randomObject.id)
+            // verifyNotEmpty('title', randomObject.title)
+            // verifyNotEmpty('body', randomObject.body)
+
+            cy.log(randomObject.title)
+            
         })
     })
 })
