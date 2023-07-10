@@ -21,3 +21,9 @@ console.log(indexOfO);
 
 let indexOfWorld = helloString.indexOf('World')
 console.log(indexOfWorld);
+
+let price = [80, 15, 50]
+let itemName = ["Table", "Cup", "Chair"]
+
+let messageTOPrint = `The price for your ${itemName[1]} is ${price[1]} dollars` //interpolation
+console.log(messageTOPrint);

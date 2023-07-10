@@ -10,6 +10,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "type": "module",
   "devDependencies": {
     "cypress": "^12.16.0",
     "jest-cli": "^29.5.0",
