@@ -25,7 +25,7 @@ let customer = {
 }
 customer.firstName = "Micheal" //dot notation
 customer["lastName"] = "Scofield" //bracket notation
-console.log(`${customer.firstName} ${customer.lastName}`);
+console.log(`${customer.firstName} ${customer.lastName} has the car named ${customer.cars[0]}`);
 console.log(customer.cars[2]);
 
 //Array

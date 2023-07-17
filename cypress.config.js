@@ -8,3 +8,4 @@ module.exports = defineConfig({
     specPattern: 'cypress/api_test/**.{js,jsx,ts,tsx,feature}',
   },
 });
+

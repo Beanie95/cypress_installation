@@ -33,3 +33,22 @@ Chay bien moi truong o CM: yarn cypress run --spec cypress/api_test/TC_06_handle
 https://dev.to/xvier/documenting-cypress-custom-commands-2n13
 
 Run code: install Code Runner extension => Ctrl Alt N 
+
+1. GET
+let body = JSON.parse(JSON.stringify(response.body))
+expect(body[0]).has.property("title", "Where you been") //verify 1 field trong object 
+body.forEach(function(item){
+	expect(item).to.have.all.keys("id","title","author")
+	cy.log(item["author"] + item["title"])
+})
+
+2.POST 
+var titleOFPost = new Array()
+let body = JSON.parse(JSON.stringify(response.body))
+body.forEach(function(item){
+	titleOFPost.push(item["item"])
+}.then(() => {
+	var latesttitle = titleOFPost[titleOFPost.length -1]
+	expect(latesttitle).to.eq("")
+})
+

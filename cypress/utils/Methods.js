@@ -1,8 +1,8 @@
-const METHOD = {
+ export const METHOD = {
     get: "GET",
     post: "POST",
     put: "PUT",
     delete: "DELETE",
 }
 
-module.exports = {METHOD}
+//module.exports = {METHOD}
