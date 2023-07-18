@@ -1,12 +1,12 @@
 import { METHOD } from "../utils/Methods";
-import * as userData from "../fixtures/postData";
+import postData from "../fixtures/db.json";
 
 describe('Post request', () => {
     it('Validate status code', () => {
         cy.request({
-            url: "https://jsonplaceholder.typicode.com/users",
+            url: "http://localhost:3000/posts",
             method: METHOD.post,
-            body: userData
+            body: postData.posts
         }).then (res => {
             let {status, body} = res
             let responseBody = JSON.parse(JSON.stringify(body))

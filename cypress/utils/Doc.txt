@@ -52,3 +52,18 @@ body.forEach(function(item){
 	expect(latesttitle).to.eq("")
 })
 
+Cai dat json-server
+sudo npm install -g json-server
+Tạo một file db.json với nội dung:
+
+{
+  "posts": [
+    { "id": 1, "title": "json-server", "author": "typicode" }
+  ],
+  "comments": [
+    { "id": 1, "body": "some comment", "postId": 1 }
+  ],
+  "profile": { "name": "typicode" }
+}
+
+json-server --watch db.json 
