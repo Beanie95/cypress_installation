@@ -1,12 +1,12 @@
 import { METHOD } from "../utils/Methods";
-import postData from "../fixtures/db.json";
+import { items } from "../fixtures/db";
 
 describe('Post request', () => {
     it('Validate status code', () => {
         cy.request({
             url: "http://localhost:3000/posts",
             method: METHOD.post,
-            body: postData.posts
+            body: items.posts
         }).then (res => {
             let {status, body} = res
             let responseBody = JSON.parse(JSON.stringify(body))
